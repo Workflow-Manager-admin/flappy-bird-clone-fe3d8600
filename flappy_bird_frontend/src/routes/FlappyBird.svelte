@@ -8,7 +8,9 @@
   const COLOR_GROUND = '#C2B280';
   const PIPE_WIDTH = 52;
   const BIRD_SIZE = 36;
-  const GRAVITY = 0.55;
+  // Gravity and drag adjustment for slower descent:
+  // Lower gravity and add vertical drag (velocity damper)
+  const GRAVITY = 0.34;   // was 0.55 (lower = slower fall)
   const JUMP = -8.5;
   const PIPE_GAP = 114;
   // Increased interval for wider space between walls (pipes): was 92
@@ -121,6 +123,8 @@
   function update() {
     // bird physics
     bird.vy += GRAVITY;
+    // Apply gentle vertical drag (air resistance) to slow falling after gravity applied
+    bird.vy *= 0.98; // multiplier < 1 adds drag; adjust as needed
     bird.y += bird.vy;
 
     // ground collision
