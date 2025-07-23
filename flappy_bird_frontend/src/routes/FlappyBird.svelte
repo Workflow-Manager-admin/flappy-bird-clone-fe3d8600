@@ -11,7 +11,8 @@
   const GRAVITY = 0.55;
   const JUMP = -8.5;
   const PIPE_GAP = 114;
-  const PIPE_INTERVAL = 92;
+  // Increased interval for wider space between walls (pipes): was 92
+  const PIPE_INTERVAL = 160;
   const BIRD_X = 56;
   const GAME_SPEED = 2.2;
   const GROUND_HEIGHT = 54;
