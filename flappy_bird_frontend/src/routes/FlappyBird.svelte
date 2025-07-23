@@ -12,7 +12,7 @@
   // Lower gravity and add vertical drag (velocity damper)
   const GRAVITY = 0.34;   // was 0.55 (lower = slower fall)
   const JUMP = -8.5;
-  const PIPE_GAP = 114;
+  const PIPE_GAP = 160;   // Increased from 114 to 160 for easier gameplay
   // Increased interval for wider space between walls (pipes): was 92
   const PIPE_INTERVAL = 160;
   const BIRD_X = 56;
